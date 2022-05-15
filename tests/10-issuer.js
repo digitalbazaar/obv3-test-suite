@@ -6,10 +6,9 @@
 const chai = require('chai');
 chai.use(require('chai-string'));
 const {filterByTag} = require('vc-api-test-suite-implementations');
-const {shouldThrowInvalidInput, testIssuedVc} = require('./assertions');
 const {createValidVc} = require('./mock.data');
+const {testIssuedVc} = require('./assertions');
 
-const should = chai.should();
 const {match, nonMatch} = filterByTag({issuerTags: ['VC-API']});
 
 function addReportCell({test, name}) {
@@ -42,10 +41,7 @@ describe('Issuer - OpenBadge v3 - Achievment', function() {
         const {issuer: {id: issuerId}} = issuer;
         const credential = createValidVc({issuerId});
         const body = {credential};
-        const {result, data: issuedVc, error} = await issuer.issue({body});
-        //should.exist(result, 'Expected result from issuer.');
-        //result.status.should.equal(201, 'Expected statusCode 201.');
-        //should.exist(issuedVc, 'Expected result to have data.');
+        const {data: issuedVc} = await issuer.issue({body});
         achievementVc = issuedVc;
       });
 
@@ -67,7 +63,7 @@ describe('Issuer - OpenBadge v3 - Achievment', function() {
 
         achievement.type.should.equal(
           'Achievement', 'Expected achievement `type` of `Achievement`');
-      });  
+      });
 
       it('MUST contain an `achievementType` of `Certificate`.', () => {
         addReportCell({test: this.ctx.test, name});
@@ -75,22 +71,22 @@ describe('Issuer - OpenBadge v3 - Achievment', function() {
 
         achievement.achievementType.should.equal(
           'Certificate', 'Expected `achievementType` of `Certificate`');
-      });  
+      });
 
       it('MAY use an `issuer` that is a valid `did:key`.', () => {
         addReportCell({test: this.ctx.test, name});
 
         achievementVc.issuer.should.startWith(
           'did:key', 'Expected issuer to start with `did:key`');
-      });  
+      });
 
       it('MAY contain a `proof` of type `Ed25519Signature2020`.', () => {
         addReportCell({test: this.ctx.test, name});
 
         achievementVc.proof.type.should.equal(
-          'Ed25519Signature2020', 
+          'Ed25519Signature2020',
           'Expected proof type of `Ed25519Signature2020`');
-      });  
+      });
 
     });
   }
