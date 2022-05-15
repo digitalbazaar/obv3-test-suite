@@ -1,0 +1,50 @@
+{
+  "name": "obv3-test-suite",
+  "version": "0.1.0",
+  "description": "Open Badges v3 test suite",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "mocha tests/ --reporter @digitalbazaar/mocha-w3c-interop-reporter --reporter-options reportDir=\"$PWD/reports\",respec=\"$PWD/respecConfig.json\",title=\"VC API Issuer Interoperability Report 1.0\",body=\"$PWD/body.hbs\",suiteLog='./suite.log' --timeout 15000 --preserve-symlinks",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/digitalbazaar/obv3-test-suite.git"
+  },
+  "keywords": [
+    "obv3",
+    "test suite",
+    "vc",
+    "api"
+  ],
+  "author": {
+    "name": "Digital Bazaar, Inc.",
+    "email": "support@digitalbazaar.com",
+    "url": "https://digitalbazaar.com/"
+  },
+  "bugs": {
+    "url": "https://github.com/digitalbazaar/obv3-test-suite/issues"
+  },
+  "homepage": "https://github.com/digitalbazaar/obv3-test-suite#readme",
+  "dependencies": {
+    "@digitalbazaar/did-method-key": "^2.0.0",
+    "@digitalbazaar/ed25519-signature-2020": "^3.0.0",
+    "@digitalbazaar/ezcap": "^2.0.4",
+    "@digitalbazaar/http-client": "^2.0.1",
+    "@digitalbazaar/mocha-w3c-interop-reporter": "^1.0.0",
+    "bnid": "^2.1.0",
+    "chai": "^4.3.6",
+    "mocha": "^9.2.2",
+    "require-dir": "^1.2.0",
+    "uuid": "^8.3.2",
+    "vc-api-test-suite-implementations": "github:digitalbazaar/vc-api-test-suite-implementations"
+  },
+  "devDependencies": {
+    "eslint": "^8.11.0",
+    "eslint-config-digitalbazaar": "^2.8.0",
+    "eslint-plugin-jsdoc": "^38.0.6"
+  }
+}
