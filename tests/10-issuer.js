@@ -18,7 +18,7 @@ function addReportCell({test, name}) {
   };
 }
 
-describe('Issuer - OpenBadge v3 - Achievment', function() {
+describe('Issuer - OpenBadge v3 - Achievement', function() {
   const summaries = new Set();
   this.summary = summaries;
   const reportData = [];
