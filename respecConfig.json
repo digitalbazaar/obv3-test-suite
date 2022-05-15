@@ -1,0 +1,19 @@
+{
+  "specStatus": "unofficial",
+  "shortName": "obv3-test-suite",
+  "subtitle": " Open Badges v3 Test Suite",
+  "github": "https://github.com/digitalbazaar/obv3-test-suite",
+  "edDraftURI": "https://digitalbazaar.github.io/obv3-test-suite/",
+  "doJsonLd": true,
+  "includePermalinks": false,
+  "editors": [
+    { "name": "Manu Sporny", "url": "https://github.com/aljones15",
+      "company": "Digital Bazaar", "companyURL": "http://digitalbazaar.com/" }
+  ],
+  "authors": [
+    { "name": "Manu Sporny", "url": "http://manu.sporny.org/",
+      "company": "Digital Bazaar", "companyURL": "http://digitalbazaar.com/" },
+    { "name": "Andrew Jones", "url": "https://github.com/aljones15",
+      "company": "Digital Bazaar", "companyURL": "http://digitalbazaar.com/" }
+  ]
+}
