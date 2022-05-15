@@ -17,6 +17,8 @@ various issuers that implement the
 
 ## Install
 
+You will need version 16 or greater of node.js to run the test suite.
+
 ```js
 npm i --legacy-peer-deps
 ```
