@@ -1,7 +1,7 @@
 {
   "specStatus": "unofficial",
   "shortName": "obv3-test-suite",
-  "subtitle": " Open Badges v3 Test Suite",
+  "subtitle": "Open Badges v3 Interoperability Test Suite",
   "github": "https://github.com/digitalbazaar/obv3-test-suite",
   "edDraftURI": "https://digitalbazaar.github.io/obv3-test-suite/",
   "doJsonLd": true,

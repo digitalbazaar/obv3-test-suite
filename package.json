@@ -7,7 +7,7 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "mocha tests/ --reporter @digitalbazaar/mocha-w3c-interop-reporter --reporter-options reportDir=\"$PWD/reports\",respec=\"$PWD/respecConfig.json\",title=\"VC API Issuer Interoperability Report 1.0\",body=\"$PWD/body.hbs\",suiteLog='./suite.log' --timeout 15000 --preserve-symlinks",
+    "test": "mocha tests/ --reporter @digitalbazaar/mocha-w3c-interop-reporter --reporter-options reportDir=\"$PWD/reports\",respec=\"$PWD/respecConfig.json\",title=\"Open Badges v3 Interoperability Report 1.0\",body=\"$PWD/body.hbs\",suiteLog='./suite.log' --timeout 15000 --preserve-symlinks",
     "lint": "eslint ."
   },
   "repository": {
