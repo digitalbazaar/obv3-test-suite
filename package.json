@@ -37,6 +37,7 @@
     "@digitalbazaar/mocha-w3c-interop-reporter": "^1.0.0",
     "bnid": "^2.1.0",
     "chai": "^4.3.6",
+    "chai-string": "^1.5.0",
     "mocha": "^9.2.2",
     "require-dir": "^1.2.0",
     "uuid": "^8.3.2",

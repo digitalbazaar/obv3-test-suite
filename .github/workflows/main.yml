@@ -1,4 +1,4 @@
-name: Generate Interop Report
+name: Generate Open Badges v3 Interop Report
 
 on:
   workflow_dispatch:
