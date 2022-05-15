@@ -37,6 +37,96 @@ various issuers that implement the
   </section>
 
   <p>
+The test suite uses the following Open Badges v3 Verifiable Credential for 
+all tests:
+  </p>
+
+  <pre class="example" title="An Open Badges v3 Achievement">
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    {"@vocab": "https://w3id.org/openbadges#"},
+    "https://w3id.org/vc-revocation-list-2020/v1",
+    "https://w3id.org/security/suites/ed25519-2020/v1"
+  ],
+  "type": ["VerifiableCredential", "OpenBadge"],
+  "id": "urn:uuid:3d1f86b3-bb5a-4d0c-a9ea-a2476cb4b1f6",
+  "issuer": "did:key:z6MkrPZEAWZX1zhZkWsmxGGiP6BWMW3YKHB1q6MLEML3CyLY",
+  "issuanceDate": "2022-05-15T20:40:12Z",
+  "credentialSubject": {
+    "id": "did:key:z6MkhTNL7i2etLerDK8Acz5t528giE5KA4p75T6ka1E1D74r",
+    "achievement": {
+      "id": "https://obv3.example/achievements/123",
+      "type": "Achievement",
+      "achievementType": "Certificate",
+      "name": "Robotic Drones Analysis",
+      "description": "Learn to analyze and present the different types of robotic drones",
+      "image": "https://obv3.example/drone-image.png",
+      "creator": "did:key:z6MkhTNL7i2etLp75T6ka1E1D74rrDK8Acz5t528giE5KA4",
+      "criteria": "https://obv3.example/robotics-drone-analysis.html",
+      "tags": [
+        "robots",
+        "not birds"
+      ],
+      "alignment": [{
+        "targetName": "CCSS.ELA-Literacy.RST.11-12.3",
+        "targetUrl": "http://www.corestandards.org/ELA-Literacy/RST/11-12/3",
+        "targetDescription": "Follow precisely a complex multistep procedure when carrying out experiments, taking measurements, or performing technical tasks; analyze the specific results based on explanations in the text.",
+        "targetCode": "CCSS.ELA-Literacy.RST.11-12.3"
+      }],
+      "resultDescription": [{
+        "id": "urn:uuid:da72e42e-9f38-4c42-83ac-33f6cb9bb3b1",
+        "name": "Mastery",
+        "resultType": "PerformanceLevel",
+        "rubricCriterionLevels": [{
+          "id": "urn:uuid:24df3f14-4b9b-41b9-9e6b-d48798442425",
+          "name": "Below Basic",
+          "level": "Below Basic",
+          "description": "The student made fewer than 3 citations"
+        },
+        {
+          "id": "urn:uuid:c225be08-c67d-4ec8-ae8e-4860e83588ef",
+          "name": "Basic",
+          "level": "Basic",
+          "description": "The student made 3-5 citations"
+        },
+        {
+          "id": "urn:uuid:f256d3a9-c117-43bf-9e25-dc69691e18a1",
+          "name": "Exceeds",
+          "level": "Exceeds",
+          "description": "The student made more than 5 citations"
+        }]
+      }]
+    },
+    "results": [{
+      "resultDescription": "urn:uuid:da72e42e-9f38-4c42-83ac-33f6cb9bb3b1",
+      "achievedLevel": "urn:uuid:f256d3a9-c117-43bf-9e25-dc69691e18a1"
+    }],
+    "evidence": {
+      "id": "https://obv3.example/my-robot-drones-analysis.html",
+      "name": "My Robot Drones Analysis",
+      "description": "A paper in APA format analyzing five different types of robot drones that look like birds.",
+      "narrative": "This research paper compared different types of robot drones that are sometimes mistaken for birds and their impacts on the environment.",
+      "genre": "Journal Article"
+    }
+  },
+  "credentialStatus": {
+    "id": "https://issuer.qa.veres.app/issuers/z1A4PiNG5NKz738aSd6PUPBNH/slcs/z19myYiXC4CBCgJaLXyF2RbjB#24624",
+    "type": "RevocationList2020Status",
+    "revocationListCredential": "https://issuer.qa.veres.app/issuers/z1A4PiNG5NKz738aSd6PUPBNH/slcs/z19myYiXC4CBCgJaLXyF2RbjB",
+    "revocationListIndex": "24624"
+  },
+  "proof": {
+    "type": "Ed25519Signature2020",
+    "created": "2022-05-15T20:40:12Z",
+    "verificationMethod": "did:key:z6MkrPZEAWZX1zhZkWsmxGGiP6BWMW3YKHB1q6MLEML3CyLY#z6MkrPZEAWZX1zhZkWsmxGGiP6BWMW3YKHB1q6MLEML3CyLY",
+    "proofPurpose": "assertionMethod",
+    "proofValue": "z41McEEsStePJG2jC3kgMZP1iFiHFCcGTkKD27hFQeMVDXSSLf73coU3t9VqwHcYMZL8qf7BHxrRNBNBaNQe6q6Ej"
+  }
+}
+  </pre>
+
+  <p>
   The results of the tests are shown below:
   </p>
 </section>
